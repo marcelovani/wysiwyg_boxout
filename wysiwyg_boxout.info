@@ -1,0 +1,6 @@
+name = Wysiwyg boxout
+description = Plugin to add Boxout in wysiwyg editors.
+package = User interface
+core = 7.x
+dependencies[] = wysiwyg
+files[] = plugins/boxout.inc

@@ -1,0 +1,19 @@
+/* CSS for admin interface and front-end */
+.boxout {
+  float: right;
+  width: 45%;
+  margin: .4em 0 .4em 1em;
+  background: #E6ECEF;
+  padding: 0.5em;
+  border-top: 6px solid #F2B250;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  line-height: 1.4;
+}
+.boxout p {
+  line-height: 1.4;
+}
+.boxout p last-child{
+  margin-bottom: 0;
+}
