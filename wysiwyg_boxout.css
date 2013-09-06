@@ -3,9 +3,9 @@
   float: right;
   width: 45%;
   margin: .4em 0 .4em 1em;
-  background: #E6ECEF;
+  background: #e6ecef;
   padding: 0.5em;
-  border-top: 6px solid #F2B250;
+  border-top: 6px solid #f2b250;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -14,6 +14,6 @@
 .boxout p {
   line-height: 1.4;
 }
-.boxout p last-child{
+.boxout p last-child {
   margin-bottom: 0;
 }

@@ -2,7 +2,6 @@
 
 /**
  * @file
- *
  * Module adds a Wywisyg plugin for boxout.
  */
 
@@ -16,14 +15,14 @@ function wysiwyg_boxout_wysiwyg_include_directory($type) {
   }
 }
 
-/*
+/**
  * Boxout input form.
  */
 function wysiwyg_boxout_form() {
   $form = array(
     '#prefix' => '<div class="boxout-popup">',
     '#suffix' => '</div>',
-      );
+  );
   $form['boxout_header'] = array(
     '#type' => 'textfield',
     '#title' => t('Header'),
@@ -50,10 +49,10 @@ function wysiwyg_boxout_form() {
   return $form;
 }
 
-/*
+/**
  * Implements hook_page_alter().
  */
 function wysiwyg_boxout_page_alter(&$page) {
-  drupal_add_css(drupal_get_path('module', 'wysiwyg_boxout') .'/plugins/boxout/boxout.css');
-  drupal_add_css(drupal_get_path('module', 'wysiwyg_boxout') .'/wysiwyg_boxout.css');
+  drupal_add_css(drupal_get_path('module', 'wysiwyg_boxout') . '/plugins/boxout/boxout.css');
+  drupal_add_css(drupal_get_path('module', 'wysiwyg_boxout') . '/wysiwyg_boxout.css');
 }
