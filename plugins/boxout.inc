@@ -12,7 +12,7 @@ function wysiwyg_boxout_boxout_plugin() {
   $plugins['boxout'] = array(
     'title' => t('Boxout'),
     'vendor url' => 'http://drupal.org/project/wysiwyg_boxout',
-    'icon title' => t('Adds Boxout to content'),
+    'icon title' => t('Add Boxout to content'),
     'css path' => drupal_get_path('module', 'wysiwyg_boxout'),
     'css file' => 'wysiwyg_boxout.css',
     'settings'   => array(
