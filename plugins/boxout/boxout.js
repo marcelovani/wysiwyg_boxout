@@ -30,12 +30,10 @@
       jQuery(".boxout-popup").center().show(function() {
         // Listeners for buttons.
         jQuery("#edit-boxout-cancel").click(function() {
-        	alert("a");
           jQuery(".boxout-popup").remove();
         });
 
         jQuery("#edit-boxout-insert").click(function() {
-        	        	alert("b");
           if (typeof(jQuery("#edit-boxout-header").val()) != "undefined") {
             // Content markup.
             var content = settings.header_markup['prefix'] +
