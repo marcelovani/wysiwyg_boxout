@@ -19,11 +19,11 @@ function wysiwyg_boxout_boxout_plugin() {
     'settings'   => array(
       'form_markup' => drupal_render($form),
       'header_markup' => array(
-        'prefix' => '<div class="boxout"><span><strong>',
-        'suffix' => '</strong></span>',
+        'prefix' => '<div class="boxout"><[element_type] class="boxout-title"><strong>',
+        'suffix' => '</strong></[element_type]>',
       ),
       'body_markup' => array(
-        'prefix' => '<br /><br />',
+        'prefix' => '',
         'suffix' => '</div>',
       ),
     ),
