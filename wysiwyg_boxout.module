@@ -30,6 +30,18 @@ function wysiwyg_boxout_form() {
     '#size' => 50,
     '#maxlength' => 256,
   );
+  $form['boxout_header_element_type'] = array(
+    '#type' => 'select',
+    '#title' => t('Element type'),
+    '#options' => array(
+      'p' => '<p>',
+      'h2' => '<h2>',
+      'h3' => '<h3>',
+      'h4' => '<h4>',
+      'h5' => '<h5>',
+    ),
+    '#default_value' => '<P>',
+  );
   $form['boxout_body'] = array(
     '#type' => 'textarea',
     '#title' => t('Body'),

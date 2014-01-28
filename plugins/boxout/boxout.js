@@ -35,10 +35,11 @@
 
         jQuery("#edit-boxout-insert").click(function() {
           if (typeof(jQuery("#edit-boxout-header").val()) != "undefined") {
+            var element_type = jQuery("#edit-boxout-header-element-type").val();
             // Content markup.
-            var content = settings.header_markup['prefix'] +
+            var content = settings.header_markup['prefix'].replace('[element_type]', element_type) +
                     jQuery("#edit-boxout-header").val() +
-                    settings.header_markup['suffix'] +
+                    settings.header_markup['suffix'].replace('[element_type]', element_type) +
                     settings.body_markup['prefix'] +
                     jQuery("#edit-boxout-body").val() +
                     settings.body_markup['suffix'];
