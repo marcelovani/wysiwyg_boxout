@@ -35,17 +35,20 @@
 
         jQuery("#edit-boxout-insert").click(function() {
           if (typeof(jQuery("#edit-boxout-header").val()) != "undefined") {
+
+            // Get all values.
             var style = jQuery("#edit-boxout-style").val();
             var element_type = jQuery("#edit-boxout-header-element-type").val();
-            // Content markup.
-            var content = settings.header_markup['prefix']
-                .replace('[element_type]', element_type)
-                .replace('[style]', style) +
-                    jQuery("#edit-boxout-header").val() +
-                    settings.header_markup['suffix'].replace('[element_type]', element_type) +
-                    settings.body_markup['prefix'] +
-                    jQuery("#edit-boxout-body").val() +
-                    settings.body_markup['suffix'];
+            var header = jQuery("#edit-boxout-header").val();
+            var body = jQuery("#edit-boxout-body").val();
+
+            // Replace tokens.
+            var content = settings.boxout_markup
+                .replace(/\[element_type\]/g, element_type)
+                .replace('[style]', style)
+                .replace('[header]', header)
+                .replace('[body]', body);
+
             // Insert content.
             Drupal.wysiwyg.instances[instanceId].insert(content);
           }
