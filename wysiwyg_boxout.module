@@ -23,6 +23,15 @@ function wysiwyg_boxout_form() {
     '#prefix' => '<div class="boxout-popup">',
     '#suffix' => '</div>',
   );
+  $form['boxout_style'] = array(
+    '#type' => 'select',
+    '#title' => t('Style'),
+    '#options' => array(
+      'default' => 'Default',
+      'plain' => 'Plain',
+    ),
+    '#default_value' => 'plain',
+  );
   $form['boxout_header'] = array(
     '#type' => 'textfield',
     '#title' => t('Header'),
