@@ -9,6 +9,7 @@
  * Implements hook_wysiwyg_module_plugin().
  */
 function wysiwyg_boxout_boxout_plugin() {
+  $form = drupal_get_form('wysiwyg_boxout_form');
   $plugins['boxout'] = array(
     'title' => t('Boxout'),
     'vendor url' => 'http://drupal.org/project/wysiwyg_boxout',
@@ -16,7 +17,7 @@ function wysiwyg_boxout_boxout_plugin() {
     'css path' => drupal_get_path('module', 'wysiwyg_boxout'),
     'css file' => 'wysiwyg_boxout.css',
     'settings'   => array(
-      'form_markup' => drupal_render(drupal_get_form('wysiwyg_boxout_form')),
+      'form_markup' => drupal_render($form),
       'header_markup' => array(
         'prefix' => '<div class="boxout"><span><strong>',
         'suffix' => '</strong></span>',
