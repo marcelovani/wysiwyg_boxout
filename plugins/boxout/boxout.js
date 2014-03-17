@@ -1,12 +1,12 @@
-(function ($) {
+(function (jQuery) {
   Drupal.wysiwyg.plugins['boxout'] = {
     /**
      * Return whether the passed node belongs to this plugin.
      */
     isNode: function(node) {
       // Check for boxout wrapper and inner elements. @TODO loop through.
-      var is_boxout = ($(node).is('.boxout') || $(node).parent().is('.boxout')
-              || $(node).parent().parent().is('.boxout'));
+      var is_boxout = (jQuery(node).is('.boxout') || jQuery(node).parent().is('.boxout')
+              || jQuery(node).parent().parent().is('.boxout'));
       return (is_boxout);
     },
 
@@ -22,12 +22,12 @@
      */
     show_popup: function(settings, instanceId) {
       // Check if the form is not yet on the DOM.
-      if ($('.boxout-popup').length == 0) {
+      if (jQuery('.boxout-popup').length == 0) {
         // Print the form on the page.
         jQuery("body").append(settings.form_markup);
       }
       // Display popup centered on screen.
-      jQuery(".boxout-popup").center().show(function() {
+      jQuery(".boxout-popup").center().show("fast", "linear", function() {
         // Listeners for buttons.
         jQuery("#edit-boxout-cancel").click(function() {
           jQuery(".boxout-popup").remove();
