@@ -24,3 +24,8 @@ How to use
 When you are editing an article you will see the Wysiwyg button, click on it to
 see a popup where you can insert a Header and a Body. When you click Insert 
 it will add a div that will format and display the box.
+
+TODO
+====
+Support CKEditor 4.x
+
